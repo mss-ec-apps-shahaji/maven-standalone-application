@@ -18,9 +18,9 @@
 	<description>Maven Standalone Application</description>
 
 	<properties>
-		<sonar.host.url>http://35.154.242.68:9000/</sonar.host.url>
+		<sonar.host.url>http://13.233.156.109:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
-		<sonar.password>admin</sonar.password>
+		<sonar.password>shahu123</sonar.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -34,6 +34,21 @@
 		</dependency>
 
 	</dependencies>
+	
+	<distributionManagement>
+            <repository>
+	    <id>nexus</id>
+            <name>facebook release repo</name>
+	    <url>http://13.233.236.142:8081/repository/facebook-release/</url>	    
+	    </repository> 	     
+	<sanpshotRepository>
+            <id>nexus</id>
+            <name>facebook sanpshot repo</name>
+	    <url>http://13.233.236.142:8081/repository/facebook-snapshot/</url>	    		
+	</sanpshotRepository>	
+
+        </distributionManagement>
+	
 
 	<!-- Committing and updating changes through Maven, by using below mvn command. 
 		For Commiting mvn -Dmessage="Updated using maven" scm:checkin For updating 
